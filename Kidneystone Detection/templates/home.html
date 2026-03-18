@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kidney AI Detection System</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Segoe UI,Arial;
+    background:linear-gradient(180deg,#02160e,#000);
+    color:#eaffea;
+    text-align:center;
+}
+
+/* HERO SECTION */
+.hero{
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:42px;
+    color:#f9ff00;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:700px;
+    margin:auto;
+    line-height:1.6;
+    color:#d8ffe6;
+}
+
+/* BUTTONS */
+
+.btn-container{
+    margin-top:35px;
+}
+
+.btn{
+    padding:14px 35px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:bold;
+    text-decoration:none;
+    margin:10px;
+    display:inline-block;
+}
+
+.login-btn{
+    background:#0aff72;
+    color:#002b1c;
+}
+
+.register-btn{
+    background:#f9ff00;
+    color:#02160e;
+}
+
+/* DASHBOARD GRID */
+
+.dashboard{
+    padding:60px 30px;
+}
+
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* CARDS */
+
+.card{
+    background:linear-gradient(160deg,#062f1f,#02160e);
+    border:2px solid #aaff00;
+    border-radius:20px;
+    padding:30px;
+}
+
+.card h3{
+    color:#f9ff00;
+}
+
+.card p{
+    color:#d7ffe5;
+}
+
+/* STATS */
+
+.stats{
+    margin-top:70px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.stat-box{
+    background:#02160e;
+    border:2px solid #0aff72;
+    border-radius:15px;
+    padding:25px;
+}
+
+.stat-box h2{
+    color:#0aff72;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:70px;
+    padding:15px;
+    border-top:1px solid #0aff72;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+<h1>Kidney Stone Detection System</h1>
+
+<p>
+AI powered system that analyzes kidney X-ray images to detect kidney stones
+using machine learning and medical image processing.
+</p>
+
+<div class="btn-container">
+<a href="/login" class="btn login-btn">Login</a>
+<a href="/register" class="btn register-btn">Register</a>
+</div>
+
+</section>
+
+
+<!-- DASHBOARD PREVIEW -->
+<section class="dashboard">
+
+<h2>System Features</h2>
+
+<div class="dashboard-grid">
+
+<div class="card">
+<h3>AI Prediction</h3>
+<p>Upload kidney X-ray images and detect kidney stones using trained AI models.</p>
+</div>
+
+<div class="card">
+<h3>Medical Analysis</h3>
+<p>View prediction statistics and graphical analysis of detected cases.</p>
+</div>
+
+<div class="card">
+<h3>Health Solutions</h3>
+<p>Get lifestyle and dietary recommendations to prevent kidney stones.</p>
+</div>
+
+<div class="card">
+<h3>Doctor Recommendations</h3>
+<p>Consult specialists if kidney stones are detected in prediction results.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- KIDNEY FACTS -->
+<section class="stats">
+
+<div class="stat-box">
+<h2>1 in 10</h2>
+<p>People develop kidney stones in their lifetime</p>
+</div>
+
+<div class="stat-box">
+<h2>90%</h2>
+<p>Stones can pass naturally if detected early</p>
+</div>
+
+<div class="stat-box">
+<h2>70%</h2>
+<p>Caused by dehydration</p>
+</div>
+
+<div class="stat-box">
+<h2>50%</h2>
+<p>Chance of recurrence without prevention</p>
+</div>
+
+</section>
+
+
+<footer>
+© 2026 Kidney AI Detection System
+</footer>
+
+</body>
+</html>

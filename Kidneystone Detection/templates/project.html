@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Project{% endblock %}
+
+{% block content %}
+
+<div class="card">
+
+<h2>Kidney Stone Detection System</h2>
+
+<p>
+This project is an AI-powered medical imaging system that detects
+kidney stones from X-ray images using machine learning algorithms.
+The goal of the system is to assist doctors and patients in early
+diagnosis of kidney stones.
+</p>
+
+<h3>Project Objectives</h3>
+
+<ul>
+<li>Detect kidney stones using AI image analysis</li>
+<li>Assist medical professionals with faster diagnosis</li>
+<li>Provide health recommendations for patients</li>
+<li>Visualize prediction results and statistics</li>
+</ul>
+
+<h3>Technologies Used</h3>
+
+<ul>
+<li>Python</li>
+<li>Flask Web Framework</li>
+<li>Machine Learning (Random Forest / Deep Learning)</li>
+<li>OpenCV & Image Processing</li>
+<li>SQLite Database</li>
+<li>HTML, CSS, Bootstrap</li>
+</ul>
+
+<h3>How the System Works</h3>
+
+<p>
+Users upload kidney X-ray images through the prediction page.
+The trained machine learning model analyzes the image and
+predicts whether a kidney stone is present or not. The system
+then displays prediction results along with recommendations.
+</p>
+
+</div>
+
+{% endblock %}

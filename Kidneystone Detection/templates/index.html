@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<style>
+
+/* GRID */
+
+.box-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:30px;
+}
+
+/* CONTENT BOX */
+
+.info-box{
+background:linear-gradient(160deg,#03151a,#01090d);
+padding:30px;
+border-radius:15px;
+box-shadow:0 0 20px rgba(0,255,255,0.3);
+transition:0.3s;
+text-align:center;
+}
+
+.info-box:hover{
+transform:translateY(-6px);
+box-shadow:0 0 30px cyan;
+}
+
+.info-box h3{
+color:#00f2ff;
+margin-bottom:12px;
+}
+
+.info-box p{
+color:#eaffff;
+font-size:14px;
+line-height:1.6;
+}
+
+.section-title{
+text-align:center;
+color:#00f2ff;
+margin-top:40px;
+}
+
+</style>
+
+
+<h2 class="section-title">System Features</h2>
+
+<div class="box-grid">
+
+<div class="info-box">
+<h3>AI Prediction</h3>
+<p>
+This system analyzes kidney X-ray images using artificial
+intelligence models to detect kidney stones quickly and accurately.
+</p>
+</div>
+
+<div class="info-box">
+<h3>Medical Analysis</h3>
+<p>
+The system provides graphical analysis and prediction statistics
+to help understand kidney stone detection results.
+</p>
+</div>
+
+<div class="info-box">
+<h3>Health Solutions</h3>
+<p>
+Users receive lifestyle and diet recommendations that help
+reduce the risk of kidney stone formation.
+</p>
+</div>
+
+<div class="info-box">
+<h3>Doctor Recommendations</h3>
+<p>
+If kidney stones are detected, the system suggests consulting
+medical specialists for proper diagnosis and treatment.
+</p>
+</div>
+
+</div>
+
+
+
+<h2 class="section-title">How The System Works</h2>
+
+<div class="box-grid">
+
+<div class="info-box">
+<h3>Step 1</h3>
+<p>Upload a kidney X-ray image to the system.</p>
+</div>
+
+<div class="info-box">
+<h3>Step 2</h3>
+<p>The machine learning model processes the image.</p>
+</div>
+
+<div class="info-box">
+<h3>Step 3</h3>
+<p>The system detects whether kidney stones exist.</p>
+</div>
+
+<div class="info-box">
+<h3>Step 4</h3>
+<p>Results and recommendations are displayed.</p>
+</div>
+
+</div>
+
+
+
+<h2 class="section-title">Kidney Health Facts</h2>
+
+<div class="box-grid">
+
+<div class="info-box">
+<h3>1 in 10</h3>
+<p>People develop kidney stones during their lifetime.</p>
+</div>
+
+<div class="info-box">
+<h3>90%</h3>
+<p>Small stones can pass naturally with proper hydration.</p>
+</div>
+
+<div class="info-box">
+<h3>70%</h3>
+<p>Kidney stones are commonly caused by dehydration.</p>
+</div>
+
+<div class="info-box">
+<h3>50%</h3>
+<p>Many patients may experience recurrence without prevention.</p>
+</div>
+
+</div>
+
+{% endblock %}

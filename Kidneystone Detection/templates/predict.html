@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Prediction{% endblock %}
+
+{% block content %}
+<div class="card">
+
+    <h2>🩻 Upload Kidney X-ray</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <br><br>
+        <button>Predict</button>
+    </form>
+
+    {% if prediction %}
+    <hr>
+
+    <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;">
+
+        {% if image %}
+        <div>
+            <img src="/{{ image }}" width="220" style="border-radius:10px;box-shadow:0 0 10px cyan;">
+        </div>
+        {% endif %}
+
+        <div style="flex:1;">
+            <h3>{{ prediction }}</h3>
+            <p><b>Confidence:</b> {{ confidence }}%</p>
+            <p><b>Stone Size:</b> {{ stone_size }}</p>
+            <p><b>Risk Level:</b> {{ risk }}</p>
+            <p><b>Recommended Doctor:</b><br>{{ doctor }}</p>
+        </div>
+
+    </div>
+    {% endif %}
+
+</div>
+{% endblock %}

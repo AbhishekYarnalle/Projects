@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Analysis{% endblock %}
+
+{% block content %}
+<div class="card">
+
+    <h2>📊 Prediction Analysis Dashboard</h2>
+
+    <div style="display:flex;gap:20px;margin-top:20px;flex-wrap:wrap;">
+
+        <div style="background:#1f2937;padding:20px;border-radius:10px;width:200px;">
+            <h3>Total Predictions</h3>
+            <h2>{{ total }}</h2>
+        </div>
+
+        <div style="background:#065f46;padding:20px;border-radius:10px;width:200px;">
+            <h3>Normal</h3>
+            <h2>{{ normal_count }}</h2>
+        </div>
+
+        <div style="background:#7f1d1d;padding:20px;border-radius:10px;width:200px;">
+            <h3>Stone</h3>
+            <h2>{{ stone_count }}</h2>
+        </div>
+
+    </div>
+
+    <hr style="margin:30px 0;">
+
+    <div style="display:flex;gap:30px;flex-wrap:wrap;justify-content:center;">
+
+        <div>
+            <h3>Bar Chart</h3>
+            <img src="{{ url_for('static', filename='bar_chart.png') }}"
+                 width="350"
+                 style="border-radius:10px;">
+        </div>
+
+        <div>
+            <h3>Pie Chart</h3>
+            <img src="{{ url_for('static', filename='pie_chart.png') }}"
+                 width="350"
+                 style="border-radius:10px;">
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
