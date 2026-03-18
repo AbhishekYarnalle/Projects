@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prediction — WaterGuard AI</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+}
+
+/* NAVBAR (same) */
+.navbar{
+display:flex;justify-content:space-between;align-items:center;
+padding:20px 40px;background:rgba(0,0,0,0.6);
+box-shadow:0 0 20px cyan;
+}
+
+.logo{font-family:'Orbitron';font-size:24px;color:cyan;text-shadow:0 0 15px cyan;}
+
+.nav-links a{
+text-decoration:none;margin-left:15px;padding:8px 15px;border-radius:5px;
+transition:.3s;font-size:12px;font-weight:bold;font-family:'Orbitron';
+}
+
+.nav-links a:hover{box-shadow:0 0 20px cyan;}
+.btn{border:2px solid cyan;color:cyan;}
+.btn:hover{background:cyan;color:black;}
+.logout{background:red;border:none;color:white;}
+.logout:hover{box-shadow:0 0 20px red;}
+
+.hero{text-align:center;padding:50px 20px;}
+.hero h1{font-family:'Orbitron';color:#00ffff;text-shadow:0 0 25px cyan;}
+
+.container{max-width:1000px;margin:auto;padding:30px;display:grid;gap:35px;}
+
+.card{
+background:rgba(0,0,0,0.6);
+border:1px solid cyan;border-radius:15px;padding:30px;
+box-shadow:0 0 15px rgba(0,255,255,.2);
+}
+
+.card h2{font-family:'Orbitron';color:#00ffff;margin-bottom:15px;}
+.text{line-height:1.9;color:#d7f7ff;font-size:14px}
+
+/* FORM */
+form{display:grid;gap:12px;margin-top:10px;}
+
+input{
+padding:12px;border-radius:8px;border:none;
+background:#0c1f25;color:white;
+border:1px solid cyan;
+}
+
+input:focus{outline:none;box-shadow:0 0 10px cyan;}
+
+button{
+padding:12px;border:none;border-radius:8px;
+background:cyan;color:black;font-weight:600;
+cursor:pointer;
+}
+button:hover{box-shadow:0 0 20px cyan;}
+
+/* TABLE */
+table{
+width:100%;
+border-collapse:collapse;margin-top:15px;
+}
+td,th{border:1px solid cyan;padding:8px;text-align:center;}
+th{background:#022c33;}
+
+/* RESULT */
+.result-safe{color:#00ff9d;font-weight:600;}
+.result-unsafe{color:#ff6b6b;font-weight:600;}
+
+.chart{display:block;margin:15px auto;width:70%;max-width:600px;border:1px solid cyan;border-radius:10px;}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+}
+.feature{
+background:#071a20;padding:15px;border-radius:10px;border:1px solid cyan;
+font-size:13px;
+}
+
+.footer{text-align:center;padding:20px;background:rgba(0,0,0,0.6);margin-top:40px;font-size:13px;opacity:.7;}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+<div class="logo">AI-WaterGuard</div>
+<div class="nav-links">
+<a href="/" class="btn">Home</a>
+<a href="/predict" class="btn">Predict</a>
+<a href="/about" class="btn">About</a>
+<a href="/analysis" class="btn">Analysis</a>
+<a href="/solution" class="btn">Solution</a>
+<a href="/contact" class="btn">Contact</a>
+<a href="/vis" class="btn">Visualization</a>
+<a href="/info" class="btn">Info</a>
+<a href="/logout" class="logout">Logout</a>
+</div>
+</div>
+
+<div class="hero">
+<h1>Water Potability Prediction</h1>
+</div>
+
+<div class="container">
+
+<!-- INTRO -->
+<div class="card">
+<h2>💧 Prediction Overview</h2>
+<p class="text">
+This module predicts whether water is safe for drinking using a trained Random Forest Machine Learning model. The system analyzes multiple chemical and physical parameters such as pH, solids, conductivity, and turbidity to determine potability. Users provide water characteristics and receive an instant classification result. The prediction helps support environmental monitoring and rapid decision-making. This feature demonstrates real-time ML deployment in a web application.
+</p>
+</div>
+
+<!-- FORM -->
+<div class="card">
+<h2>🧪 Enter Water Parameters</h2>
+
+<form method="POST">
+<input name="ph" placeholder="pH (example: 7.2)">
+<input name="Hardness" placeholder="Hardness (example: 200)">
+<input name="Solids" placeholder="Solids (example: 15000)">
+<input name="Chloramines" placeholder="Chloramines (example: 7)">
+<input name="Sulfate" placeholder="Sulfate (example: 300)">
+<input name="Conductivity" placeholder="Conductivity (example: 400)">
+<input name="Organic_carbon" placeholder="Organic Carbon (example: 14)">
+<input name="Trihalomethanes" placeholder="Trihalomethanes (example: 70)">
+<input name="Turbidity" placeholder="Turbidity (example: 3)">
+<button>Predict Water Safety</button>
+</form>
+</div>
+
+<!-- FEATURE EXPLANATION -->
+<div class="card">
+<h2>📘 Feature Explanation</h2>
+<div class="feature-grid">
+<div class="feature">pH — indicates acidity/alkalinity of water.</div>
+<div class="feature">Hardness — mineral concentration affecting taste.</div>
+<div class="feature">Solids — dissolved substances present in water.</div>
+<div class="feature">Chloramines — disinfectant chemicals level.</div>
+<div class="feature">Sulfate — affects taste and water quality.</div>
+<div class="feature">Conductivity — measures ionic concentration.</div>
+<div class="feature">Organic Carbon — organic pollutant indicator.</div>
+<div class="feature">Trihalomethanes — chemical byproduct indicator.</div>
+<div class="feature">Turbidity — water clarity measurement.</div>
+</div>
+</div>
+
+<!-- FEATURE IMPORTANCE -->
+<div class="card">
+<h2>⭐ Feature Importance</h2>
+<p class="text">
+Feature importance indicates which parameters most influence the prediction. Typically solids, sulfate, pH, and conductivity play major roles. Higher turbidity and abnormal chemical levels often lead to unsafe classification. Understanding feature importance improves model transparency and trust.
+</p>
+<img src="{{ url_for('static', filename='feature.png') }}" class="chart">
+</div>
+
+{% if prediction %}
+
+<!-- INPUT TABLE -->
+<div class="card">
+<h2>📋 Entered Data</h2>
+<table>
+<tr>
+<th>Feature</th><th>Value</th>
+</tr>
+{% for k,v in request.form.items() %}
+<tr><td>{{k}}</td><td>{{v}}</td></tr>
+{% endfor %}
+</table>
+</div>
+
+<!-- RESULT -->
+<div class="card">
+<h2>🎯 Prediction Result</h2>
+
+{% if prediction == "Safe Water" %}
+<p class="result-safe">Result: {{prediction}}</p>
+<p class="text">
+Tips: Water appears safe. Maintain regular testing, proper storage, and contamination monitoring. Continue standard filtration and sanitation practices.
+</p>
+{% else %}
+<p class="result-unsafe">Result: {{prediction}}</p>
+<p class="text">
+Tips: Water may be unsafe. Use filtration, boiling, or purification before consumption. Investigate chemical imbalance and contamination sources.
+</p>
+{% endif %}
+
+</div>
+
+{% endif %}
+
+</div>
+
+<div class="footer">
+© 2026 WaterGuard AI | Prediction Module
+</div>
+
+</body>
+</html>

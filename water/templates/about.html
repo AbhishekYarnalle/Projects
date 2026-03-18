@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About — WaterGuard AI</title>
+
+<!-- NEW ATTRACTIVE FONT COMBINATION -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    min-height:100vh;
+}
+
+/* NAVBAR (same as index with all items) */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:rgba(0,0,0,0.6);
+    box-shadow:0 0 20px cyan;
+}
+
+.logo{
+    font-family:'Orbitron';
+    font-size:24px;
+    color:cyan;
+    text-shadow:0 0 15px cyan;
+}
+
+.nav-links a{
+    text-decoration:none;
+    margin-left:15px;
+    padding:8px 15px;
+    border-radius:5px;
+    transition:0.3s;
+    font-size:12px;
+    font-weight:bold;
+    font-family:'Orbitron';
+}
+
+.nav-links a:hover{
+    box-shadow:0 0 20px cyan;
+}
+
+.btn{
+    border:2px solid cyan;
+    color:cyan;
+}
+
+.btn:hover{
+    background:cyan;
+    color:black;
+}
+
+.logout{
+    background:red;
+    border:none;
+    color:white;
+}
+
+.logout:hover{
+    box-shadow:0 0 20px red;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:60px 20px 30px;
+}
+
+.hero h1{
+    font-family:'Orbitron';
+    font-size:40px;
+    color:#00ffff;
+    text-shadow:0 0 25px cyan;
+}
+
+/* CONTAINER */
+.container{
+    padding:40px 50px;
+    display:grid;
+    gap:40px;
+}
+
+/* CARD */
+.card{
+    background:rgba(0,0,0,0.6);
+    border:1px solid cyan;
+    border-radius:15px;
+    padding:35px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px cyan;
+}
+
+.card h2{
+    font-family:'Orbitron';
+    color:#00ffff;
+    margin-bottom:20px;
+    text-shadow:0 0 15px cyan;
+}
+
+/* TEXT COLORS */
+.text{
+    line-height:1.9;
+    font-size:15px;
+    color:#e0f7ff;
+}
+
+/* HIGHLIGHTS */
+.dev{
+    color:#00ffea;
+    font-weight:600;
+}
+
+.usn{
+    color:#ffd369;
+    font-weight:600;
+}
+
+.guide{
+    color:#ff7af6;
+    font-weight:700;
+    text-shadow:0 0 10px #ff7af6;
+}
+
+.guide-desc{
+    color:#ffe9ff;
+    font-style:italic;
+}
+
+/* FEATURES LIST */
+.features{
+    color:#9be7ff;
+    line-height:2;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.6);
+    margin-top:40px;
+    font-size:13px;
+    opacity:0.7;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR (ALL 9 ITEMS SAME AS INDEX) -->
+<div class="navbar">
+    <div class="logo">AI-WaterGuard</div>
+    <div class="nav-links">
+        <a href="/" class="btn">Home</a>
+        <a href="/predict" class="btn">Predict</a>
+        <a href="/about" class="btn">About</a>
+        <a href="/analysis" class="btn">Analysis</a>
+        <a href="/solution" class="btn">Solution</a>
+        <a href="/contact" class="btn">Contact</a>
+        <a href="/vis" class="btn">Visualization</a>
+        <a href="/info" class="btn">Info</a>
+        <a href="/logout" class="logout">Logout</a>
+    </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>About Developer & Project</h1>
+</div>
+
+<div class="container">
+
+<!-- ABOUT DEVELOPER -->
+<div class="card">
+<h2>👨‍💻 About Developer</h2>
+
+<p class="text">
+<strong class="dev">Name:</strong> Abhishek Ramesh <br>
+<strong class="usn">USN:</strong> 3RB24MC002 <br>
+<strong class="dev">Program:</strong> MCA Final Year <br>
+<strong class="dev">Institution:</strong> Bheemanna Khandre Institute of Technology
+</p>
+
+<br>
+
+<p class="text">
+This project represents a practical implementation of Machine Learning and full-stack development concepts applied to real-world environmental challenges. It demonstrates the developer’s strong interest in Artificial Intelligence, Data Science, and intelligent system design.
+</p>
+
+<br>
+
+<p class="text">
+The developer expresses sincere gratitude to 
+<strong class="guide">Prof. Yogesh VG</strong>, Head of the MCA Department, for his continuous mentorship, valuable guidance, and academic support throughout the project lifecycle.
+</p>
+
+<p class="guide-desc">
+His dynamic leadership, disciplined academic vision, and strict yet inspiring personality motivated consistent learning, professionalism, and technical excellence, which significantly contributed to the successful completion of this project.
+</p>
+
+</div>
+
+<!-- ABOUT PROJECT -->
+<div class="card">
+<h2>💧 About Project</h2>
+
+<p class="text">
+<strong>Drinking Water Potability Classification using Machine Learning</strong> is a smart web-based AI system developed to determine whether water is safe for drinking based on multiple chemical and physical parameters.
+</p>
+
+<br>
+
+<p class="text">
+The system leverages a Random Forest Machine Learning model trained on the water potability dataset to perform accurate classification. It integrates prediction, analytics, visualization, and secure user tracking within a unified full-stack platform.
+</p>
+
+<br>
+
+<p class="text">
+This project contributes to smart environmental monitoring and public health awareness while demonstrating real-world deployment of AI systems.
+</p>
+
+<br>
+
+<p class="features">
+• AI-based water safety prediction <br>
+• Secure login and prediction history tracking <br>
+• Dataset visualization and analytics dashboards <br>
+• Automated ML model training and deployment <br>
+• Database + Excel logging system <br>
+• Interactive futuristic user interface
+</p>
+
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 WaterGuard AI | MCA Major Project
+</div>
+
+</body>
+</html>

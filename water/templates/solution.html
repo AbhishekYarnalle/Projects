@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Water Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Orbitron', sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    min-height:100vh;
+}
+
+/* NAVBAR */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:rgba(0,0,0,0.6);
+    box-shadow:0 0 20px cyan;
+}
+
+.logo{
+    font-size:24px;
+    color:cyan;
+    text-shadow:0 0 15px cyan;
+}
+
+.nav-links a{
+    text-decoration:none;
+    margin-left:15px;
+    padding:8px 15px;
+    border-radius:5px;
+    transition:0.3s;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.nav-links a:hover{
+    box-shadow:0 0 20px cyan;
+}
+
+/* Buttons */
+.btn{
+    border:2px solid cyan;
+    color:cyan;
+}
+
+.btn:hover{
+    background:cyan;
+    color:black;
+}
+
+.logout{
+    background:red;
+    border:none;
+    color:white;
+}
+
+.logout:hover{
+    box-shadow:0 0 20px red;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:80px 20px 40px;
+}
+
+.hero h1{
+    font-size:40px;
+    color:cyan;
+    text-shadow:0 0 25px cyan;
+    margin-bottom:15px;
+}
+
+.hero p{
+    opacity:0.8;
+}
+
+/* CONTENT */
+.container{
+    padding:60px 40px;
+    text-align:center;
+}
+
+.container h1{
+    color:cyan;
+    margin-bottom:40px;
+    text-shadow:0 0 20px cyan;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(0,0,0,0.6);
+    padding:30px;
+    border-radius:15px;
+    border:1px solid cyan;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px cyan;
+}
+
+.card h3{
+    color:cyan;
+    margin-bottom:15px;
+}
+
+.footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.6);
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">AI-WaterGuard</div>
+        <div class="nav-links">
+            <a href="/" class="btn">Home</a>
+            <a href="/predict" class="btn">Predict</a>
+            <a href="/about" class="btn">About</a>
+            <a href="/analysis" class="btn">Analysis</a>
+            <a href="/solution" class="btn">Solution</a>
+            <a href="/contact" class="btn">Contact</a>
+            <a href="/vis" class="btn">Visualization</a>
+            <a href="/info" class="btn">Info</a>
+    
+            <a href="/logout" class="nav-links logout">Logout</a>
+        </div>
+    </div>
+
+<div class="container">
+    <h1>Water Treatment Solutions</h1>
+
+    <div class="cards">
+        <div class="card">
+            <h3>🧪 Filtration</h3>
+            <p>Use advanced filtration systems to remove physical impurities and suspended particles.</p>
+        </div>
+
+        <div class="card">
+            <h3>💊 Chlorination</h3>
+            <p>Disinfect water using chlorine to eliminate harmful bacteria and viruses.</p>
+        </div>
+
+        <div class="card">
+            <h3>🔥 Boiling</h3>
+            <p>Boiling water for at least 5–10 minutes kills most microorganisms.</p>
+        </div>
+
+        <div class="card">
+            <h3>🌞 UV Treatment</h3>
+            <p>Ultraviolet purification destroys pathogens without affecting taste.</p>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    © 2026 WaterGuard AI | Smart Water Safety Solutions
+</div>
+
+</body>
+</html>
